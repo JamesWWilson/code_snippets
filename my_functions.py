@@ -17,3 +17,16 @@ def valid_date(s: str) -> str:
     except ValueError:
         msg = "not a valid date: {0!r}".format(s)
         raise argparse.ArgumentTypeError(msg)
+        
+# custom functions
+def format_n(n, int_flag=False):
+    try:
+        pre, suf = n.split('.')
+    except:
+        return int(n.replace(',', '') or 0)
+    pre = pre.replace(',', '')
+    suf = int(suf)/100
+    res = int(pre) + suf
+    return int(res) if int_flag else res
+
+format_n("1,000", int_flag=True)
