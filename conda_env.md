@@ -25,5 +25,10 @@ conda init <YOUR SHELL>
 conda activate your_env 
 conda deactivate
 ```
+### Write a requriements file for your active conda env
+```
+conda list -e > /path/to/your/folder/requirements.txt
+```
+
 
 
