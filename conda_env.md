@@ -1,4 +1,4 @@
-# Create a unique environment with Conda on Mac OSX
+# Create and Manage Unique Conda Environments on Mac OSX
 
 ### Install Honeybrew
 
@@ -25,5 +25,15 @@ conda init <YOUR SHELL>
 conda activate your_env 
 conda deactivate
 ```
+### Write a requriements file for your active conda env
+```
+conda list -e > /path/to/your/folder/requirements.txt
+```
+### Remove conda environments as they are no longer needed
+```
+conda env remove --name your_environment_name
+```
+
+
 
 
